@@ -1,0 +1,552 @@
+/* ===== BASIC RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #14213d;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ===== NAVIGATION BAR ===== */
+.navbar {
+    width: 100%;
+    min-height: 85px;
+    padding: 18px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 20px rgba(20, 33, 61, 0.05);
+}
+
+.logo,
+.footer-logo {
+    color: #5145f5;
+    font-size: 27px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.navbar nav a {
+    color: #334155;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #5145f5;
+}
+
+/* ===== LOGIN AND SIGN UP BUTTONS ===== */
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    white-space: nowrap;
+}
+
+.login-btn,
+.signup-btn {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.login-btn {
+    color: #5145f5;
+    border: 1px solid #d5d1ff;
+}
+
+.login-btn:hover {
+    background: #f0efff;
+}
+
+.signup-btn {
+    color: #ffffff;
+    background: #5145f5;
+    border: 1px solid #5145f5;
+}
+
+.signup-btn:hover {
+    background: #3930cf;
+    transform: translateY(-2px);
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    width: 100%;
+    padding: 65px 7%;
+    min-height: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: linear-gradient(120deg, #f6f7ff, #ffffff);
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.tagline,
+.section-heading span,
+.section-label {
+    display: inline-block;
+    color: #5145f5;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 4vw, 55px);
+    line-height: 1.15;
+    margin-bottom: 22px;
+    letter-spacing: -1.5px;
+    overflow-wrap: break-word;
+}
+
+.hero h1 span {
+    color: #5145f5;
+}
+
+.hero-content > p {
+    max-width: 480px;
+    color: #64748b;
+    font-size: 16px;
+    margin-bottom: 28px;
+}
+
+.primary-btn,
+.cta-btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 10px;
+    color: #ffffff;
+    background: #5145f5;
+    font-weight: 600;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.primary-btn:hover,
+.cta-btn:hover {
+    background: #3930cf;
+    transform: translateY(-3px);
+}
+
+/* ===== HERO IMAGE ===== */
+.hero-image {
+    flex: 1;
+    min-width: 0;
+    max-width: 520px;
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(81, 69, 245, 0.12);
+}
+
+/* ===== COURSES SECTION ===== */
+.courses {
+    width: 100%;
+    padding: 65px 7%;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-heading h2,
+.about h2 {
+    font-size: 34px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.section-heading p,
+.about > div:first-child > p {
+    color: #64748b;
+}
+
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* ===== COURSE CARDS ===== */
+.course-card {
+    min-width: 0;
+    padding: 25px 20px;
+    border: 1px solid #edf0f7;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 5px 20px rgba(20, 33, 61, 0.04);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(81, 69, 245, 0.10);
+}
+
+.course-icon {
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    background: #f0efff;
+    border-radius: 14px;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.course-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.course-card p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* ===== ABOUT SECTION ===== */
+.about {
+    width: 100%;
+    padding: 65px 7%;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 45px;
+    align-items: center;
+    background: #f7f8ff;
+}
+
+.about h2 {
+    margin-bottom: 18px;
+}
+
+/* ===== BENEFITS ===== */
+.benefits {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.benefits > div {
+    min-width: 0;
+    text-align: center;
+    padding: 18px 10px;
+}
+
+.benefits span {
+    font-size: 28px;
+}
+
+.benefits h3 {
+    font-size: 15px;
+    margin: 12px 0 6px;
+}
+
+.benefits p {
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* ===== CALL TO ACTION SECTION ===== */
+.cta {
+    margin: 45px 7%;
+    padding: 40px 30px;
+    text-align: center;
+    border-radius: 18px;
+    color: #ffffff;
+    background: linear-gradient(120deg, #14213d, #5145f5);
+}
+
+.cta h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.cta p {
+    margin-bottom: 22px;
+    color: #e0e7ff;
+}
+
+.cta-btn {
+    background: #ffffff;
+    color: #5145f5;
+}
+
+.cta-btn:hover {
+    color: #ffffff;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    width: 100%;
+    padding: 30px 7%;
+    text-align: center;
+    color: #cbd5e1;
+    background: #101b35;
+}
+
+.footer-logo {
+    display: inline-block;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+footer p {
+    font-size: 13px;
+    margin-top: 7px;
+    overflow-wrap: anywhere;
+}
+
+/* ===== LAPTOP RESPONSIVE DESIGN ===== */
+@media (max-width: 1200px) {
+    .navbar {
+        padding-left: 5%;
+        padding-right: 5%;
+        gap: 18px;
+    }
+
+    .navbar nav {
+        gap: 18px;
+    }
+
+    .hero,
+    .courses,
+    .about {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero {
+        gap: 30px;
+    }
+
+    .course-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* ===== TABLET RESPONSIVE DESIGN ===== */
+@media (max-width: 1000px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar nav {
+        justify-content: center;
+    }
+
+    .nav-buttons {
+        justify-content: center;
+    }
+
+    .hero {
+        gap: 25px;
+    }
+
+    .hero h1 {
+        font-size: clamp(32px, 4.5vw, 45px);
+    }
+
+    .hero-image img {
+        height: 280px;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
+/* ===== MOBILE RESPONSIVE DESIGN ===== */
+@media (max-width: 650px) {
+    .navbar {
+        justify-content: center;
+        padding: 18px 5%;
+        gap: 15px;
+    }
+
+    .logo {
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .nav-buttons {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero {
+        padding: 45px 6%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 30px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+
+    .courses {
+        padding: 45px 6%;
+    }
+
+    .section-heading h2,
+    .about h2 {
+        font-size: 28px;
+    }
+
+    .course-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .course-card {
+        padding: 20px 15px;
+    }
+
+    .course-card h3 {
+        font-size: 16px;
+    }
+
+    .about {
+        padding: 45px 6%;
+    }
+
+    .benefits {
+        grid-template-columns: 1fr;
+    }
+
+    .cta {
+        margin: 30px 5%;
+        padding: 32px 20px;
+    }
+
+    .cta h2 {
+        font-size: 25px;
+    }
+
+    footer {
+        padding: 25px 5%;
+    }
+}
+
+/* ===== SMALL MOBILE RESPONSIVE DESIGN ===== */
+@media (max-width: 400px) {
+    .navbar nav {
+        gap: 10px 15px;
+    }
+
+    .navbar nav a {
+        font-size: 14px;
+    }
+
+    .login-btn,
+    .signup-btn {
+        padding: 9px 16px;
+    }
+
+    .hero {
+        padding: 35px 5%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-content > p {
+        font-size: 14px;
+    }
+
+    .courses {
+        padding: 40px 5%;
+    }
+
+    .course-container {
+        grid-template-columns: 1fr;
+    }
+
+    .course-card {
+        padding: 22px 18px;
+    }
+
+    .about {
+        padding: 40px 5%;
+    }
+
+    .cta {
+        margin: 25px 4%;
+        padding: 28px 15px;
+    }
+
+    .cta h2 {
+        font-size: 23px;
+    }
+
+    footer {
+        padding: 25px 5%;
+    }
+}
