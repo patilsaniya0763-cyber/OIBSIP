@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | My Portfolio</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">My<span>Portfolio.</span></a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <section class="contact-section">
+        <div class="section-heading">
+            <p class="eyebrow">GET IN TOUCH</p>
+            <h1>Let's <span>Connect</span></h1>
+            <div class="underline"></div>
+            <p class="subtitle">
+                Have an opportunity or project in mind?
+                I'd love to hear from you.
+            </p>
+        </div>
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+                <h2>Let's work together 🚀</h2>
+                <p class="description">
+                    I am interested in software development and always
+                    ready to learn new technologies, improve my skills,
+                    and explore new career opportunities.
+                </p>
+
+                <a class="info-item"
+                   href="mailto:YOUR_EMAIL@gmail.com">
+                    <span class="info-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </span>
+                    <span>
+                        <small>Email</small>
+                        <strong>mp.hadanal@gmail.com</strong>
+                    </span>
+                </a>
+
+                <div class="info-item">
+                    <span class="info-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </span>
+                    <span>
+                        <small>Location</small>
+                        <strong>Nippani, Karnataka, India</strong>
+                    </span>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/patilsaniya0763-cyber"
+                       target="_blank" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/saniya-patil-81336a3a2"
+                       target="_blank" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <form class="contact-form"
+                  action="mailto:YOUR_EMAIL@gmail.com"
+                  method="post" enctype="text/plain">
+
+                <div class="form-row">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="Name"
+                               placeholder="Your name" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="Email"
+                               placeholder="Your email" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="Subject"
+                           placeholder="What is this about?" required>
+                </div>
+
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="Message" rows="5"
+                              placeholder="Write your message..."
+                              required></textarea>
+                </div>
+
+                <button type="submit">
+                    Send Message <i class="fa-solid fa-paper-plane"></i>
+                </button>
+
+                <p class="form-note">
+                    You can also contact me directly through email.
+                </p>
+            </form>
+
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <a href="index.html" class="footer-logo">
+        My<span>Portfolio.</span>
+    </a>
+    <p>Learning today, building tomorrow. 💙</p>
+    <p class="copyright">
+        © 2026 My Portfolio. All rights reserved.
+    </p>
+</footer>
+
+</body>
+</html>

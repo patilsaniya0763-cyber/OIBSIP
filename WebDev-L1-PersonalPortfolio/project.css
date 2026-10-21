@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #f8fafc;
+}
+
+.projects-section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px 8%;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.heading h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.heading h1 span {
+    color: #38bdf8;
+}
+
+.heading p {
+    color: #94a3b8;
+    line-height: 1.7;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.project-card {
+    background: #111c30;
+    border: 1px solid #263449;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    border-color: #38bdf8;
+}
+
+.project-icon {
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #081120;
+}
+
+.project-icon i {
+    font-size: 60px;
+    color: #38bdf8;
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.category {
+    font-size: 12px;
+    color: #38bdf8;
+    letter-spacing: 1px;
+}
+
+.project-content h2 {
+    font-size: 22px;
+    line-height: 1.5;
+    margin: 14px 0;
+}
+
+.project-content p {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.tech span {
+    background: #1e293b;
+    color: #cbd5e1;
+    padding: 7px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.project-link {
+    display: inline-block;
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.project-link:hover {
+    color: white;
+}
+
+.status {
+    display: inline-block;
+    color: #fbbf24;
+    background: #292516;
+    padding: 9px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.back-home {
+    display: block;
+    width: fit-content;
+    margin: 40px auto 0;
+    padding: 12px 20px;
+    background: #38bdf8;
+    color: #0f172a;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 7px;
+}
+
+.back-home:hover {
+    background: white;
+}
+
+@media (max-width: 750px) {
+    .projects-section {
+        padding: 45px 6%;
+    }
+
+    .heading h1 {
+        font-size: 32px;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+}
