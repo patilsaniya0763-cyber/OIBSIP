@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A responsive temperature converter for Celsius, Fahrenheit and Kelvin.">
+    <title>Tempora | Temperature Converter</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="navbar">
+            <a href="#" class="brand">
+                <span class="brand-icon">✳</span>
+                <span>tempora<span class="brand-dot">.</span></span>
+            </a>
+            <span class="nav-label">
+                <span class="status-dot"></span>
+                SMART TEMPERATURE TOOL
+            </span>
+        </header>
+
+        <main class="main-content">
+            <section class="intro">
+                <span class="eyebrow">SIMPLE. FAST. ACCURATE.</span>
+                <h1>Temperature,<br><span>reimagined.</span></h1>
+                <p>Convert temperatures between Celsius, Fahrenheit and Kelvin in seconds.</p>
+            </section>
+
+            <section class="converter-card" aria-label="Temperature converter">
+                <div class="card-top">
+                    <div>
+                        <span class="section-label">TEMPERATURE CONVERTER</span>
+                        <h2>Make your conversion</h2>
+                    </div>
+                    <div class="thermometer-icon" aria-hidden="true">🌡️</div>
+                </div>
+
+                <form id="converterForm" novalidate>
+                    <label for="temperature">Enter temperature</label>
+
+                    <div class="input-row">
+                        <input
+                            type="number"
+                            id="temperature"
+                            name="temperature"
+                            step="any"
+                            placeholder="e.g. 25"
+                            inputmode="decimal"
+                            aria-describedby="errorMessage"
+                            required
+                        >
+
+                        <div class="unit-select">
+                            <label class="sr-only" for="inputUnit">Input temperature unit</label>
+                            <select id="inputUnit" name="inputUnit">
+                                <option value="C">°C Celsius</option>
+                                <option value="F">°F Fahrenheit</option>
+                                <option value="K">K Kelvin</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <p id="errorMessage" class="error-message" role="alert" aria-live="polite"></p>
+
+                    <button type="submit" id="convertButton">
+                        Convert temperature
+                        <span aria-hidden="true">→</span>
+                    </button>
+                </form>
+
+                <div class="results-heading">
+                    <span class="section-label">YOUR RESULTS</span>
+                    <span class="live-badge">3 UNITS</span>
+                </div>
+
+                <div class="results-grid" id="results" aria-live="polite" aria-atomic="true">
+                    <article class="result-card celsius">
+                        <div class="result-top">
+                            <span class="unit-symbol">°C</span>
+                            <span class="result-arrow">↗</span>
+                        </div>
+                        <p>Celsius</p>
+                        <h3 id="celsiusResult">— <small>°C</small></h3>
+                    </article>
+
+                    <article class="result-card fahrenheit">
+                        <div class="result-top">
+                            <span class="unit-symbol">°F</span>
+                            <span class="result-arrow">↗</span>
+                        </div>
+                        <p>Fahrenheit</p>
+                        <h3 id="fahrenheitResult">— <small>°F</small></h3>
+                    </article>
+
+                    <article class="result-card kelvin">
+                        <div class="result-top">
+                            <span class="unit-symbol">K</span>
+                            <span class="result-arrow">↗</span>
+                        </div>
+                        <p>Kelvin</p>
+                        <h3 id="kelvinResult">— <small>K</small></h3>
+                    </article>
+                </div>
+
+                <p class="formula-note">
+                    <span>✦</span> Accurate formulas. Instant results. No guesswork.
+                </p>
+            </section>
+
+            <section class="how-it-works">
+                <h2>How it works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <span>01</span>
+                        <h3>Enter</h3>
+                        <p>Type your temperature value.</p>
+                    </div>
+                    <div class="step">
+                        <span>02</span>
+                        <h3>Select</h3>
+                        <p>Choose your starting unit.</p>
+                    </div>
+                    <div class="step">
+                        <span>03</span>
+                        <h3>Convert</h3>
+                        <p>Get all three results instantly.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <a href="#" class="footer-brand">tempora.</a>
+            <p>Made with care using HTML, CSS & JavaScript.</p>
+            <p class="copyright">© 2026 Tempora · Temperature made simple</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
